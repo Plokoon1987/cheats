@@ -1,0 +1,7 @@
+Note: All "Terminal calls" and "file paths" are from 'Devel/project_name'
+
+***** Create APP called app_name *****
+
+    Terminal:
+        python manage.py startapp app_name
+

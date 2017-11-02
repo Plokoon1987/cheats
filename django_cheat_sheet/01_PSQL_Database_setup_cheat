@@ -1,0 +1,53 @@
+Note: All "Terminal calls" and "file paths" are from 'Devel/project_name'
+
+***** Create DB with 'project_name' *****
+
+    Terminal:
+        createdb --encoding=UTF8 --owner=django project_name
+    
+    * IF using Geodjango in project:
+    
+        Terminal:
+            psql project_name
+        
+            CREATE EXTENSION postgis;
+        
+            CREATE EXTENSION postgis_topology;
+        
+            \q
+
+
+
+
+****** In project_name/settings.py ******
+
+    Replace content inside 'DATABASES'
+
+            DATABASES = {
+                
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'forms',
+                    'USER': 'django',
+                    'PASSWORD': '*********',
+                    'HOST': '127.0.0.1',
+                    'PORT': '5432',
+                }
+                
+            }
+            
+
+    * IF using Geodjango, replace content in ENGINE from above:
+    
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+    
+
+
+****** Initial Migrations  ******
+
+    Terminal:
+        python manage.py migrate
+        
+
+****** OBSERVATIONS  ******
+    Database in PSQl and Django are now linked!

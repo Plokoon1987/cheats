@@ -1,0 +1,56 @@
+Note: All "Terminal calls" and "file paths" are from 'Devel/project_name'
+
+***** In app_name/models.py (classes import)*****
+
+    from django.db import models
+        
+    * IF using additional Postgres Fields:
+            from django.contrib.postgres.fields import JSONField
+        
+    * IF using Geodjango fields:
+            from django.contrib.gis.db import models
+    
+
+
+***** In app_name/models.py (class creation example)*****
+
+    class Elemento(models.Model):
+    
+        ##### django.db #####
+        
+        ipid = models.IntegerField(verbose_name='IPID', null=True) # django.db
+        
+        ele_1 = models.CharField(max_length=100)
+        
+        CLASE = ( (1, 'CAMARAS'), (2,'ALIVIADEROS'), (3,'DESCARGAS'), (4, 'ELEMENTOS ESPECIAL ALDO') )
+        clase = models.IntegerField(choices=CLASE, default=1)
+        
+        
+        ##### django.contrib.postgres.fields #####
+               
+        ele_3 = JSONField()
+        
+        
+        ##### django.contrib.gis.db #####
+        
+        localizacion = models.PointField(null=True, blank=True) 
+        
+        * Important to search GeoDjango *
+
+        objects = models.GeoManager()
+
+
+    Note: A "class" is analogous to a DB table
+
+
+
+****** App Migrations  ******:
+
+    Terminal:
+        python manage.py makemigrations
+        
+        python manage.py migrate
+        
+
+****** OBSERVATIONS  ******:
+    Database in psql and app_name/models.py are now linked!

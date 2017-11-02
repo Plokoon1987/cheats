@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+
+pyexcel
+pyexcel-ods3
+pyexcel-xlsx
+
+django
+psycopg2
+
+P.D. use requirements.txt to install using pip

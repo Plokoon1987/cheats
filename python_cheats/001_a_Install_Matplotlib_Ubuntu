@@ -1,0 +1,25 @@
+########## Ubuntu ########## (16/09/2017)
+
+Source: ########
+
+Note: Matplotlib uses Tkinter, but Tkinter cannot be installed directly using pip in a virtualenv.
+      It has to be installed in python so that all virtualenvs created after its installation will have it incorporated.
+
+
+***** Verify Tkinter is installed *****
+      
+    1) Open a "python shell" an type "import tkinter"
+        
+	2)  -If it doesn't fail then it is installed!!!
+
+	    -If it fails, you have to install tkinter for that python version:
+		    sudo apt-get install python3.6-tk
+
+
+***** Install matplotlib *****
+
+	pip install matplotlib
+
+
+
+***** OBSERVATIONS *****

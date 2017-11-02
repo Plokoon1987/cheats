@@ -1,0 +1,112 @@
+****** In app/forms.py ******:
+
+    from django.contrib.auth.models import User
+    from django import forms
+
+    class UserForm(forms.ModelForm):
+        password = forms.CharField(widget=forms.PasswordInput)
+        
+        class Meta:
+            model = User
+            fields = ['username', 'email', 'password']
+
+
+        
+****** In views.py ******:
+
+    from django.shortcuts import render, redirect
+    from django.contrib.auth import authenticate, login
+    from django.views.generic import View
+    from .forms import UserForm
+
+
+    class UserFormView(View):
+        form_class = UserForm
+        template_name = 'music/registration_form.html'  # 'music' may differ
+        
+        # Displays blank form
+        def get(self, request):
+            form = self.form_class(None)
+            return render(request, self.template_name, {'form': form})
+        
+        # Process form data
+        def post(self, request):
+            form = self.form_class(request.POST)
+            
+            if form.is_valid():
+                
+                user = form.save(commit=False)
+                
+                # cleaned (normalized) data
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password']
+                user.set_password(password)
+                user.save()
+                
+                # returns User objects if credentials are correct
+                user = authenticate(username=username, password=password)
+                
+                if user is not None:
+                
+                    if user.is_active():
+                        login(request, user)
+                        return redirect('music:index')  # 'music' may differ
+                    
+            return render(request, self.template_name, {'form': form})
+
+
+
+****** In urls.py ******:
+
+    from .views import UserFormView
+
+    app_name = 'music'  # 'music' may differ
+
+    urlpatterns = [
+        url(r'^register/$', UserFormView.as_view(), name='register'),
+    ]
+
+
+
+****** In templates/music/registration_form.html ******:
+
+    {{ form }}  # This should be improved!
+
+
+
+
+
+########### SECOND WAY!!!!!!!!!!!! ##########
+
+
+
+****** In urls.py ******:
+
+    url('^', include('django.contrib.auth.urls')),
+
+
+
+****** In settings.py ******:
+
+    TEMPLATES = [
+        {
+                .
+                .
+                .
+            'DIRS': ['project_name/templates'],
+                .
+                .
+                .
+        },
+    ]
+
+
+****** In 'project_name/templates/registration/' ******:
+
+Leave templates for all login items:
+    - login.html
+    - logged_out.html
+    - password_reset_form.html
+    - password_reset_confirm.html
+    - password_reset_complete
+    - password_reset_done.html

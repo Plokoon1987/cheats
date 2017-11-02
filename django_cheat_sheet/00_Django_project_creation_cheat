@@ -1,0 +1,35 @@
+***** Create virtualenv (using python3.X) for 'project_name' *****
+    
+    Terminal (in ~/):
+    
+        mkvirtualenv -p /usr/bin/python3.X project_name
+    
+    Note:   This will create a virtualenv, but it will also create a folder 'Devel/project_name'
+            Go back to folder 'Devel' and delete folder 'project_name' (it will be created later with django)
+
+
+
+***** Install packages in virtualenv *****
+    
+    - Inside 'Devel' create a file called requirements.txt and list all python packages to be installed, ie:
+     
+        #######
+            django
+            matplotlib
+            psycopg2
+        #######
+
+    - pip install -r requirements.txt
+
+
+
+***** Create django project *****
+
+    django-admin startproject project_name
+
+    - Move requirements.txt file inside the newly created folder 'Devel/project_name'
+    
+
+***** OBSERVATIONS *****
+    
+    Django project is now created
