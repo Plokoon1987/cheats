@@ -1,0 +1,30 @@
+Referencia: https://wiki.archlinux.org/index.php/users_and_groups
+Referencia: https://feeding.cloud.geek.nz/posts/setting-up-centralied-git-repository/
+
+USERS:
+
+Add User:
+	# useradd -m -g initial_group -G additional_groups -s login_shell username
+	
+	-m creates the user home directory as /home/username (full privileges in folder)
+	-g defines the group name or number of the user's initial login group.
+	The default behaviour (USERGROUPS_ENAB yes) is to create a group with the same name 
+	as the username, with GID equal to UID.
+	-G introduces a list of supplementary groups which the user is also a member of.
+	Each group is separated from the next by a comma, with no intervening spaces.
+	-s defines the path and file name of the user's default login shell.
+	
+	# passwd username
+
+Check Groups in System:
+
+Change git folder owner group to django_devs:
+	# chgrp django_devs git/
+	# chmod g+rwx git (add permission to group)
+
+
+GIT create server:
+
+	# mkdir gestionplus.git
+	# mkdir gestionplus
+	
