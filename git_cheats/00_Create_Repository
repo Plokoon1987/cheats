@@ -1,0 +1,19 @@
+1 - Navigate to directory where you want to host git repository (ie. /srv/git/)
+
+2 - Create a folder named project.git ('project' is justa a sample name )
+
+3 - Navigate to folder created (ie. /srv/git/project.git)
+
+4 - Initialize the git repository in terminal with:
+        - git init --bare
+
+5 - Change permissions to 'project.git to allow writting permissions to all
+    developers that will be using it, perhaps put all users in a group and
+    grant full permissions to that group:
+        - chmod 770 -R project.git
+
+6 - Now all users belonging to the group owning project.git will have full
+    permissions
+
+Note: It is recommneded to look at creating Users and Groups in Linux. Also
+      look changing main group for a specific user.
