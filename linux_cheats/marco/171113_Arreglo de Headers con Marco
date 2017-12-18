@@ -1,0 +1,5 @@
+apt list --installed linux\*
+uname -a
+sudo apt remove linux-image-4.10.0-{27,33,35,37,38,40}-generic
+sudo apt autoremove
+df -h
