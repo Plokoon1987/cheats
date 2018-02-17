@@ -1,0 +1,17 @@
+SETUP in RASPBERRY PI:
+    Enabling SSH Access:
+    https://www.raspberrypi.org/documentation/remote-access/ssh/
+
+    Installing .ssh (for Passwordless):
+    https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+
+
+SETUP in CLIENT:
+    Accesing Host:
+    https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md
+
+    Accesing Host (Passwordless):
+    https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md
+
+    Copy public-key to Host (Passwordless):
+    https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
