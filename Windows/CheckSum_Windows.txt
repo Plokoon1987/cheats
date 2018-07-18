@@ -1,0 +1,8 @@
+CHeck SHA256 CheckSUm (Windows):
+  -In Powershell execute the following command:
+    CertUtil [Options] -hashfile InFile [HashAlgorithm]
+
+    (ie: CertUtil -hashfile C:\Users\jmalaga\Downloads\2018-06-27-raspbian-stretch-lite.zip  SHA256)
+    (HashAlgorithm may be: MD2, MD4, MD5, SHA1, SHA256, SHA384, SHA512, SHA1 is the default one)
+
+  -Copy Result to a file and compare to the CheckSum specified in the website
