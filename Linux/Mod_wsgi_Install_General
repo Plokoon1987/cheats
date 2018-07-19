@@ -1,0 +1,11 @@
+Installation of mod_wsgi for Apache2 in Debian:
+  - Login as sudoer
+
+
+  - In Terminal, install the following:
+    sudo apt-get install apache2-dev
+    sudo apt-get install python3-dev
+
+
+  - In the appropriate Virtualenv:
+    pip install mod_wsgi
