@@ -1,0 +1,10 @@
+﻿Installation of Apache in Debian:
+  - Login as sudoer
+
+
+  - In Terminal:
+    sudo apt-get install apache2
+
+  - Read the following website to see location and names of config files:
+    As of 18/07/2018:
+    https://wiki.apache.org/httpd/DistrosDefaultLayout#Debian.2C_Ubuntu_.28Apache_httpd_2.x.29:

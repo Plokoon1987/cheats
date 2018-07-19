@@ -1,0 +1,38 @@
+Installation of Virtualenvwrapper in Debian:
+  - Login as sudoer
+
+
+  - In Terminal:
+    sudo apt-get install virtualenvwrapper
+
+
+  - Find where 'virtualenvwrapper.sh' file is located:
+    sudo find ./ -name virtualenvwrapper.sh
+
+
+  - Use the located address to configure .bashrc:
+    sudo nano ~/.bashrc
+
+    Write the following at the end of the file (source is the location found previously):
+ 
+     # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+      # sources /etc/bash.bashrc).
+      if ! shopt -oq posix; then
+        if [ -f /usr/share/bash-completion/bash_completion ]; then
+          . /usr/share/bash-completion/bash_completion
+        elif [ -f /etc/bash_completion ]; then
+          . /etc/bash_completion
+        fi
+      fi
+
+      '
+      '
+      '
+
+      export WORKON_HOME=$HOME/.virtualenvs
+      export PROJECT_HOME=$HOME/Devel
+      source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+
+  - Reload .bashrc:
+    source ~/.bashrc
