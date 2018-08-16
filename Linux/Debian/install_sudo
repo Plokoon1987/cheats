@@ -1,0 +1,8 @@
+Login as your user (su-user):
+
+In Terminal type:
+    su (Type Password To login as root)
+    apt-get install sudo
+    visudo
+        copy root line to next line and replace 'root' for the username to grant superuser status
+    exit
