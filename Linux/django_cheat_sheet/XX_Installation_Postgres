@@ -1,0 +1,5 @@
+sudo apt-get install postgresql postresql-client
+sudo -u postgres createuser -s <username>
+createuser -P django
+createdb --encoding=UTF8 --owner=django amercia 
+
