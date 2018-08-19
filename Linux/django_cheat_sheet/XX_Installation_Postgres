@@ -3,3 +3,7 @@ sudo -u postgres createuser -s <username>
 createuser -P django
 createdb --encoding=UTF8 --owner=django amercia 
 
+sudo apt-get install postgresql-server-dev-9.6
+
+in virtualenv:
+pip install psycopg2
