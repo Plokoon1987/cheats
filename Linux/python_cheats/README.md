@@ -1,1 +1,0 @@
-Various Python cheat sheets
