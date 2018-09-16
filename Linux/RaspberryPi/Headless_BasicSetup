@@ -1,6 +1,7 @@
-https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
-https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
-https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine
+Refs:
+  https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+  https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+  https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine
 
 
 *** Connecting  RaspberryPi to the Network ***

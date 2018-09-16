@@ -1,0 +1,29 @@
+https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server
+
+git clone --bare my_project my_project.git
+
+If /srv/git does not exist:
+  ssh pi@192.168.1.35 'sudo mkdir /srv/git'
+
+Once folder exists:
+  scp -r my_project.git pi@:192.168.1.35
+  ssh pi@192.168.1.35 'sudo mv project.git /srv/git'
+
+Access server:
+  ssh pi@192.168.1.35
+  cd /srv/git/america.git/
+
+To allow access to All users in Host:
+  git init --bare --shared
+
+To customize access to users in Host:
+  Change permissions to 'project.git to allow writting permissions to all
+  developers that will be using it, perhaps put all users in a group and
+  grant full permissions to that group:
+      - chmod 770 -R project.git
+
+  Now all users belonging to the group owning project.git will have full
+  permissions
+
+  Note: It is recommneded to look at creating Users and Groups in Linux. Also
+        look changing main group for a specific user.
