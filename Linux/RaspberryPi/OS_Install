@@ -2,13 +2,13 @@ Ref_01: https://www.raspberrypi.org/downloads/
 Ref_02: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 
 Requirements:
-  - SD Card
+  - MicroSD Card
   - Raspbian or any other OS downloaded from 'Ref_01'
 
 In Terminal:
   lsblk
-    -Note: Write down name of SD Card (I think that it cannot be sda or sr0),
-           Let's assume that the SD Card is CARD_NAME (i.e. 'mmcblk0')
+    -Note: Write down name of MicroSD Card (I think that it cannot be sda or sr0),
+           Let's assume that the MicroSD Card is CARD_NAME (i.e. 'mmcblk0')
 
 If using .img file, run in Terminal:
   dd bs=4M if=<IMAGE_FILE> of=/dev/<CARD_NAME> conv=fsync
