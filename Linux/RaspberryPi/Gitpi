@@ -1,0 +1,45 @@
+Steps to follow:
+01 - ./OS_Install
+
+02 - ./Headless_BasicSetup
+
+03 - Login, Update, Upgrade, Git and Change password in RaspberryPi, and hostname:
+      Login:
+        ssh pi@IP_address
+
+      Update and Upgrade:
+        sudo apt-get update
+        sudo apt-get upgrade
+
+      Install Git:
+        sudo apt-get git
+
+      Change password:
+        passwd (default password is 'raspberry')
+
+      Change hostname 'raspberry' to 'gitpi'
+        sudo nano /etc/hostname
+        sudo nano /etc/hosts
+
+        exit
+
+04 - ./SSHPasswordless_Setup
+
+05 - Linux/Git/GitUserSetup
+
+06 - Login as git user to Gitpi server, and create repository:
+      New project:
+        git init --bare project.git
+
+      Existing project:
+        git clone --bare project project.git
+
+      This step is to make sure the owner of the repository is user 'git'
+
+07 - Login as 'pi' (sudoer) user to Gitpi server, and mv previously created
+     repository to /srv/git:
+      If not already created /srv/git:
+        sudo mkdir /srv/git
+
+      Move Repository:
+        sudo mv /home/git/project.git /srv/git
