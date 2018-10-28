@@ -1,0 +1,6 @@
+https://wiki.debian.org/ListInstalledPackages
+forums.debian.net/viewtopic.php?t=126176
+
+Note 1: Thunar (XFCE) doesn't have this package installed by default 
+
+sudo apt-get install gvfs-backends

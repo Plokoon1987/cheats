@@ -1,0 +1,29 @@
+*** Enable I2C Interface ***:
+
+https://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/
+https://radiostud.io/howto-i2c-communication-rpi/?utm_source=rpi-py-res-page&utm_medium=i2c&utm_campaign=rpi-hwintf
+
+sudo raspi-config
+  Choose: 5 > P5
+sudo reboot
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install python-smbus python3-smbus python-dev python3-dev
+sudo apt-get install i2c-tools
+
+
+Check if I2C enabled:
+lsmod | grep i2c_
+
+Testing hardware:
+i2cdetect -y 1
+
+*** Installing pip3 ***:
+
+https://www.raspberrypi.org/documentation/linux/software/python.md
+
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo apt-get update
+sudo apt-get upgrade
