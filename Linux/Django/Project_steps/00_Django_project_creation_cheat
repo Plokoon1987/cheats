@@ -16,7 +16,7 @@
         #######
             django
             matplotlib
-            psycopg2
+            psycopg2-binary
         #######
 
     - pip install -r requirements.txt
