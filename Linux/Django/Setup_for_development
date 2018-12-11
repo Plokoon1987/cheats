@@ -1,0 +1,10 @@
+1 - Install Git
+  sudo apt-get install git
+
+2 - Install Vim
+  sudo apt-get install vim
+
+3 - Install Virtualenvwrapper
+  https://github.com/Plokoon1987/cheats/blob/master/Linux/Virtualenvwrapper_Install_General
+
+4 - Install PostgreSql
