@@ -12,7 +12,7 @@ Steps to follow:
         sudo apt-get upgrade
 
       Install Git:
-        sudo apt-get git
+        sudo apt-get install git
 
       Change password:
         passwd (default password is 'raspberry')
