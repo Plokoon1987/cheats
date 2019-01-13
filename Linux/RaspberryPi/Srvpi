@@ -3,18 +3,17 @@ Steps to follow:
 
 02 - ./Headless_BasicSetup
 
-03 - ./Basic_Security_Steps (HOST_NAME=gitpi)
+03 - ./Basic_Security_Steps (HOST_NAME=srvpi)
 
-04 - ./Client_Access_Setup (USER_NAME=git)
+04 - ./Client_Access_Setup (USER_NAME=srv)
 
 05 - ./DHCPCD_config
 
 
-## GIT ##
+## APACHE  ##
 
-06 - Git :
-      Install Git:
-        sudo apt-get install git
+06 - Linux/Apache_Install_General
+
 
 07 - Login as git user to Gitpi server, and create repository:
       New project:
