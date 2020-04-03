@@ -1,5 +1,5 @@
 # OS Install
-Shows how to install a Raspbian on a "SD Card"
+Shows how to install a Raspbian on a "MicroSD Card"
 
 ## Requirements:
 * MicroSD Card
@@ -7,20 +7,18 @@ Shows how to install a Raspbian on a "SD Card"
 
 Use:
 ```
-sha256sum <FILE>'
+sha256sum <FILE>
 ```
-IMAGE_FILE can be either the image or the zip file
+* FILE: can be either the image or the zip file
 
 
-Requirements:
-  - MicroSD Card
-  - Raspbian or any other OS downloaded from 'Ref_01'
-      (use 'sha256sum <IMAGE_FILE>' or 'sha256sum <ZIP_FILE>' To verify downloaded file)
-
-In Terminal:
-  lsblk
-    -Note: Write down name of MicroSD Card (I think that it cannot be sda or sr0),
-           Let's assume that the MicroSD Card is CARD_NAME (i.e. 'mmcblk0')
+## Instructions
+Use the following command to obtain the name given to the "MicroSD Card".
+Write down name of MicroSD Card (I think that it cannot be sda or sr0)
+```
+lsblk
+```
+Let's assume that the MicroSD Card is CARD_NAME (i.e. 'mmcblk0')
 
 If using .img file, run in Terminal:
   dd bs=4M if=<IMAGE_FILE> of=/dev/<CARD_NAME> conv=fsync
