@@ -3,8 +3,14 @@ Shows how to install a Raspbian on a "SD Card"
 
 ## Requirements:
 * MicroSD Card
-* Raspbian or any other OS downloaded from [Ref_01]( https://www.raspberrypi.org/downloads/)
-      (use 'sha256sum <IMAGE_FILE>' or 'sha256sum <ZIP_FILE>' To verify downloaded file)
+* Raspbian or any other OS downloaded from [Ref_01]( https://www.raspberrypi.org/downloads/). Sha256 can be used to verify that the file has been downloaded correctly
+
+Use:
+```
+sha256sum <FILE>'
+```
+IMAGE_FILE can be either the image or the zip file
+
 
 Requirements:
   - MicroSD Card
