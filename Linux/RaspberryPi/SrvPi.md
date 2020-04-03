@@ -1,4 +1,14 @@
-Steps to follow:
+# SrvPi
+Setup project for RaspberryPi to act as a web server
+
+## Steps to follow
+* [01 - Os_Install](OS_Install.md) - Raspbian installation on a "SD Card" from a Linux System
+* [02 - Headless_BasicSetup](Headless_BasicSetup.md) - Raspberry to act as a Web Server
+* [03 - Basic_Security_Steps](Basic_Security_Steps.md) - Raspberry to act as a Web Server
+* [04 - Client_Access_Setup](Client_Access_Setup.md) - Raspberry to act as a Web Server
+* [05 - DHCPCD_config](DHCPCD_config.md) - Raspberry to act as a Web Server
+
+
 01 - ./OS_Install
 
 02 - ./Headless_BasicSetup
