@@ -42,6 +42,8 @@ i.e:
 unzip -p 2018-06-27-raspbian-stretch-lite.zip | sudo dd of=/dev/mmcblk0 bs=4M status=progress conv=fsync
 ```
 
+Congratulations, the OS has been succesfully installed on the MicroSD card!
+
 ## References
 * Ref_01: https://www.raspberrypi.org/downloads/
 * Ref_02: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md

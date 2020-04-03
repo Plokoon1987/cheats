@@ -1,27 +1,33 @@
-Refs:
-  https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
-  https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
-  https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine
+# Headless Basic Setup
+Network Configuration and SSH Access to allow Headless access to the Pi
+
+## Assumptions
+We will assumme that the MicroSD card is still connected to a Linux Operating System
 
 
-*** Connecting  RaspberryPi to the Network ***
-Note: All is relative to the 'rootfs' partition in MicroSD Card where OS
-      is installed
+## Network Connection
+Use nano to edit the 'wpa_supplicant.conf' file to setup the Network Connection
+```
+sudo nano /media/<USERNAME>/rootfs/etc/wpa_supplicant/wpa_supplicant.conf
+```
+USERNAME: is the name of the user carrying out the installation
 
-In Terminal:
-  sudo nano /media/froylan/rootfs/etc/wpa_supplicant/wpa_supplicant.conf
+Write down the following to the bottom of file
+```
+network={
+    ssid="Network_SSID"
+    psk="Network_Password"
+}
+```
 
-  Go to the bottom of the file and add the following:
+## SSH Access
+Simply add an empty file named ssh to let the system know that ssh should be enabled
+```
+sudo touch /media/<USERNAME>/boot/ssh
+```
 
-    network={
-        ssid="Network_SSID"
-        psk="Network_Password"
-    }
+## References
+* https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+* https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+* https://www.raspberrypi.org/documentation/remote-access/ssh/README.md#3-enable-ssh-on-a-headless-raspberry-pi-add-file-to-sd-card-on-another-machine
 
-
-*** Allowing SSH Access***
-Note: All is relative to the 'boot' partition in MicroSD Card where OS
-      is installed
-
-In Terminal:
-  sudo vim /media/froylan/boot/ssh (and simply save file with 'wq')
