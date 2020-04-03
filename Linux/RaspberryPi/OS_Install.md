@@ -29,9 +29,11 @@ sudo dd bs=4M if=2018-06-27-raspbian-stretch-lite.img of=/dev/mmcblk0 status=pro
 ```
 
 If .img is within a ZipFile, run in Terminal:
-  unzip -p <ZIP_FILE> | sudo dd of=/dev/<CARD_NAME> bs=4M conv=fsync
-  i.e:
-    unzip -p 2018-06-27-raspbian-stretch-lite.zip | sudo dd of=/dev/mmcblk0 bs=4M status=progress conv=fsync
+```
+unzip -p <ZIP_FILE> | sudo dd of=/dev/<CARD_NAME> bs=4M conv=fsync
+i.e:
+unzip -p 2018-06-27-raspbian-stretch-lite.zip | sudo dd of=/dev/mmcblk0 bs=4M status=progress conv=fsync
+```
 
 ## References
 * Ref_01: https://www.raspberrypi.org/downloads/
