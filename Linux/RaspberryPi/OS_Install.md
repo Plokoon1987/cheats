@@ -13,7 +13,14 @@ FILE: can be either the image or the zip file
 
 
 ## Instructions
-Use the following command to obtain the name given to the "MicroSD Card".
+Use the following command to list all connected devices.
+```
+lsblk
+```
+
+Take note of the connected devices
+
+Connect the MicroSD Card to the computer and run the same command again
 Write down name of MicroSD Card (I think that it cannot be sda or sr0)
 ```
 lsblk
