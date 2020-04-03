@@ -1,5 +1,10 @@
-Ref_01: https://www.raspberrypi.org/downloads/
-Ref_02: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+# OS Install
+Shows how to install a Raspbian on a "SD Card"
+
+## Requirements:
+* MicroSD Card
+* Raspbian or any other OS downloaded from [Ref_01]( https://www.raspberrypi.org/downloads/)
+      (use 'sha256sum <IMAGE_FILE>' or 'sha256sum <ZIP_FILE>' To verify downloaded file)
 
 Requirements:
   - MicroSD Card
@@ -20,3 +25,8 @@ If .img is within a ZipFile, run in Terminal:
   unzip -p <ZIP_FILE> | sudo dd of=/dev/<CARD_NAME> bs=4M conv=fsync
   i.e:
     unzip -p 2018-06-27-raspbian-stretch-lite.zip | sudo dd of=/dev/mmcblk0 bs=4M status=progress conv=fsync
+
+## References
+* Ref_01: https://www.raspberrypi.org/downloads/
+* Ref_02: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+
