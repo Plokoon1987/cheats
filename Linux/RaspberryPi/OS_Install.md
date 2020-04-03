@@ -9,7 +9,7 @@ Use:
 ```
 sha256sum <FILE>
 ```
-* FILE: can be either the image or the zip file
+FILE: can be either the image or the zip file
 
 
 ## Instructions
@@ -21,9 +21,12 @@ lsblk
 Let's assume that the MicroSD Card is CARD_NAME (i.e. 'mmcblk0')
 
 If using .img file, run in Terminal:
-  dd bs=4M if=<IMAGE_FILE> of=/dev/<CARD_NAME> conv=fsync
-  i.e:
-    sudo dd bs=4M if=2018-06-27-raspbian-stretch-lite.img of=/dev/mmcblk0 status=progress conv=fsync
+```
+dd bs=4M if=<IMAGE_FILE> of=/dev/<CARD_NAME> conv=fsync
+i.e:
+sudo dd bs=4M if=2018-06-27-raspbian-stretch-lite.img of=/dev/mmcblk0 status=progress conv=fsync
+
+```
 
 If .img is within a ZipFile, run in Terminal:
   unzip -p <ZIP_FILE> | sudo dd of=/dev/<CARD_NAME> bs=4M conv=fsync
